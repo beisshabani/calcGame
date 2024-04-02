@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CalcGame</title>
+  </head>
+  <body>
+    <section class="game-container start-game" id="start-game">
+      <p class="title">Calculator Game</p>
+      <p class="game-info">
+        This is a Calculator Game in which two numbers are randomly given wtih
+        different values.
+        <br />
+        <br />
+        There are two options with answers, and one of them is the correct
+        answer; Provided you answer correctly, new values will appear each time
+        you choose the correct answer, otherwise if you answer incorrectly or
+        you run out of time then the game will be over.
+      </p>
+      <div>
+        <button class="btn btn-start--game" id="startGame">
+          Start Playing
+        </button>
+      </div>
+    </section>
+
+    <section class="game-container hidden" id="play-game">
+      <aside class="flex-container time--progress">
+        <div class="progressbar" id="progressbar"></div>
+      </aside>
+      <aside class="title">What is the correct sum?</aside>
+      <aside class="flex-container col--3">
+        <div><p id="math-question--1">34</p></div>
+        <div><p id="math-operator">+</p></div>
+        <div><p id="math-question--2">21</p></div>
+      </aside>
+      <aside class="flex-container col--2">
+        <div class="btn" id="math-answer">23</div>
+        <div class="btn" id="math-answer">55</div>
+      </aside>
+    </section>
+
+    <section class="modal hidden">
+      <p class="title">Oops! Game Over</p>
+      <p class="info">That was the wrong answer start over again!</p>
+      <button class="btn modal--close" id="modal-close">OK</button>
+    </section>
+    <aside class="overlay hidden"></aside>
+    <script src="script.js"></script>
+  </body>
+</html>
